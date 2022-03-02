@@ -1,3 +1,10 @@
+"""
+Implementation of the nearest neighbor algorithm.
+Given a vector and a training set, it returns the
+element in the set that is closet to the vector based
+on euclidean distance.
+"""
+
 import math
 
 def distance(x,y):
@@ -12,8 +19,8 @@ def distance(x,y):
     assert len(x) == len(y), "The vector must have same length"
     result = ()
     sum = 0
-    for i in range(len(x)):
-        result += (x[i] -y[i],)
+    for i,j in zip(x,y):
+        result += (i - j,)
     for component in result:
         sum += component**2
     return math.sqrt(sum)
