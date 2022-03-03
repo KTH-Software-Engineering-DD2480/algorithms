@@ -1,5 +1,5 @@
 """
-Wtite a function that returns an array containing the numbers from 1 to N, 
+Write a function that returns an array containing the numbers from 1 to N,
 where N is the parametered value. N will never be less than 1.
 
 Replace certain values however if any of the following conditions are met:
@@ -26,15 +26,16 @@ Space: O(n)
 """
 
 def fizzbuzz(n):
-    
+    """Returns an array according to the requirements above"""
+
     # Validate the input
     if n < 1:
         raise ValueError('n cannot be less than one')
     if n is None:
         raise TypeError('n cannot be None')
-    
+
     result = []
-    
+
     for i in range(1, n+1):
         if i%3 == 0 and i%5 == 0:
             result.append('FizzBuzz')
@@ -49,7 +50,7 @@ def fizzbuzz(n):
 # Alternative solution
 def fizzbuzz_with_helper_func(n):
     return [fb(m) for m in range(1,n+1)]
-    
+
 def fb(m):
     r = (m % 3 == 0) * "Fizz" + (m % 5 == 0) * "Buzz"
     return r if r != "" else m

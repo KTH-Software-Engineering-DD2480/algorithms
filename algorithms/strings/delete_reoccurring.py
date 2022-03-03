@@ -1,13 +1,16 @@
 """
-QUESTION: Given a string as your input, delete any reoccurring 
+QUESTION: Given a string as your input, delete any reoccurring
 character, and return the new string.
 
 This is a Google warmup interview question that was asked duirng phone screening
-at my university. 
+at my university.
+
+Time complexity O(n)
 """
 
-# time complexity O(n)
 def delete_reoccurring_characters(string):
+    """Returns a string without any reoccuring character."""
+
     seen_characters = set()
     output_string = ''
     for char in string:
@@ -15,5 +18,3 @@ def delete_reoccurring_characters(string):
             seen_characters.add(char)
             output_string += char
     return output_string
-
-    

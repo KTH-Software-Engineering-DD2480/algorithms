@@ -1,7 +1,8 @@
 """
 Implement strStr().
 
-Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Return the index of the first occurrence of needle in haystack,
+or -1 if needle is not part of haystack.
 
 Example 1:
 Input: haystack = "hello", needle = "ll"
@@ -12,7 +13,15 @@ Input: haystack = "aaaaa", needle = "bba"
 Output: -1
 Reference: https://leetcode.com/problems/implement-strstr/description/
 """
+
 def contain_string(haystack, needle):
+    """Returns the index of the first occurence of a string
+
+    Keyword arguments:
+    haystack -- input string
+    needle -- the substring we are looking for
+    """
+
     if len(needle) == 0:
         return 0
     if len(needle) > len(haystack):

@@ -9,19 +9,21 @@ Complexity: O(n)
 """
 
 def atbash(s):
+    """Returns the inverse of input s"""
+
     translated = ""
-    for i in range(len(s)):
-        n = ord(s[i])
-        
-        if s[i].isalpha():
-            
-            if s[i].isupper():
+    for i in s:
+        n = ord(i)
+
+        if i.isalpha():
+
+            if i.isupper():
                 x = n - ord('A')
                 translated += chr(ord('Z') - x)
-            
-            if s[i].islower():
+
+            if i.islower():
                 x = n - ord('a')
                 translated += chr(ord('z') - x)
         else:
-            translated += s[i]
+            translated += i
     return translated

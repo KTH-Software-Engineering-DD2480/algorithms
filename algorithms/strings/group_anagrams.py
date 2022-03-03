@@ -11,8 +11,8 @@ Return:
 ]
 """
 
-
 def group_anagrams(strs):
+  
     d = {}
     ans = []
     k = 0
