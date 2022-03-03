@@ -16,6 +16,10 @@ Manacher's algorithm
 '''
 
 def longest_palindrome(s):
+    """
+    :type s: str
+    :rtype: str
+    """
     if len(s) < 2:
         return s
 

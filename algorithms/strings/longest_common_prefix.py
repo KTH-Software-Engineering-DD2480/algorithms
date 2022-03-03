@@ -30,17 +30,25 @@ def common_prefix(s1, s2):
     return s1[0:k]
 
 def longest_common_prefix_v1(strs):
+    """
+    :type strs: list[str]
+    :rtype: str
+    """
     if not strs:
         return ""
     result = strs[0]
-    for i in range(len(strs)):
-        result = common_prefix(result, strs[i])
+    for i in strs:
+        result = common_prefix(result, i)
     return result
 
 """
 Second solution: Vertical scanning
 """
 def longest_common_prefix_v2(strs):
+    """
+    :type strs: list[str]
+    :rtype: str
+    """
     if not strs:
         return ""
     for i in range(len(strs[0])):
@@ -53,6 +61,10 @@ def longest_common_prefix_v2(strs):
 Third solution: Divide and Conquer
 """
 def longest_common_prefix_v3(strs):
+    """
+    :type strs: list[str]
+    :rtype: str
+    """
     if not strs:
         return ""
     return longest_common(strs, 0, len(strs) -1)

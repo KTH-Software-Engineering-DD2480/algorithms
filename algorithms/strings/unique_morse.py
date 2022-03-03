@@ -79,6 +79,10 @@ morse_code = {
     'z':"--.."
 }
 def convert_morse_word(word):
+    """
+    :type words: str
+    :rtype: str
+    """
     morse_word = ""
     word = word.lower()
     for char in word:
@@ -86,6 +90,10 @@ def convert_morse_word(word):
     return morse_word
 
 def unique_morse(words):
+    """
+    :type words: list[str]
+    :rtype: int
+    """
     unique_morse_word = []
     for word in words:
         morse_word = convert_morse_word(word)

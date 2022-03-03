@@ -45,7 +45,7 @@ Variation 3:
 Using stack idea. 
 
 Note: We are assuming that we are just checking a one word string. To check if a complete sentence 
-"""  
+"""
 def remove_punctuation(s):
     """
     Remove punctuation, case sensitivity and spaces
@@ -54,41 +54,58 @@ def remove_punctuation(s):
 
 # Variation 1
 def string_reverse(s):
-	return s[::-1]
+    return s[::-1]
 
 def is_palindrome_reverse(s):
-	s = remove_punctuation(s)
-	
-	# can also get rid of the string_reverse function and just do this return s == s[::-1] in one line.
-	if (s == string_reverse(s)): 
-		return True
-	return False	
+    """
+    :type s: str
+    :rtype: bool
+    """
+    s = remove_punctuation(s)
+
+    # can also get rid of the string_reverse function and
+    # just do this return s == s[::-1] in one line.
+    if s == string_reverse(s):
+        return True
+    return False
 
 
 # Variation 2
 def is_palindrome_two_pointer(s):
+    """
+    :type s: str
+    :rtype: bool
+    """
     s = remove_punctuation(s)
-	
+
     for i in range(0, len(s)//2):
-        if (s[i] != s[len(s) - i - 1]):
+        if s[i] != s[len(s) - i - 1]:
             return False
     return True
-	
+
 
 # Variation 3
 def is_palindrome_stack(s):
+    """
+    :type s: str
+    :rtype: bool
+    """
     stack = []
     s = remove_punctuation(s)
-	
+
     for i in range(len(s)//2, len(s)):
         stack.append(s[i])
     for i in range(0, len(s)//2):
         if s[i] != stack.pop():
             return False
-    return True	
+    return True
 
 # Variation 4 (using deque)
 def is_palindrome_deque(s):
+    """
+    :type s: str
+    :rtype: bool
+    """
     s = remove_punctuation(s)
     deq = deque()
     for char in s:

@@ -1,5 +1,12 @@
+"""
+Reverse the vowels in the input string
+"""
 
 def reverse_vowel(s):
+    """
+    :type s: str
+    :rtype: str
+    """
     vowels = "AEIOUaeiou"
     i, j = 0, len(s)-1
     s = list(s)

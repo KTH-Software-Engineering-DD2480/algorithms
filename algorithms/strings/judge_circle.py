@@ -14,6 +14,10 @@ Input: "LL"
 Output: false
 """
 def judge_circle(moves):
+    """
+    :type moves: str
+    :rtype: bool
+    """
     dict_moves = {
         'U' : 0,
         'D' : 0,

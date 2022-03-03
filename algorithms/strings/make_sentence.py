@@ -14,7 +14,6 @@ eg: for given string -> "appletablet"
 
 count = 0
 
-
 def make_sentence(str_piece, dictionaries):
     global count
     if len(str_piece) == 0:

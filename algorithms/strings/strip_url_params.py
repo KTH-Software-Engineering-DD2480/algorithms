@@ -12,7 +12,7 @@ import urllib.parse
 
 # Here is a very non-pythonic grotesque solution
 def strip_url_params1(url, params_to_strip=None):
-    
+
     if not params_to_strip:
         params_to_strip = []
     if url:
@@ -84,12 +84,12 @@ def strip_url_params2(url, param_to_strip=[]):
 # Here is my friend's solution using python's builtin libraries
 def strip_url_params3(url, strip=None):
     if not strip: strip = []
-    
+
     parse = urllib.parse.urlparse(url)
     query = urllib.parse.parse_qs(parse.query)
-    
+
     query = {k: v[0] for k, v in query.items() if k not in strip}
     query = urllib.parse.urlencode(query)
     new = parse._replace(query=query)
-    
+
     return new.geturl()

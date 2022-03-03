@@ -1,3 +1,10 @@
+"""
+Reverse the words in a string
+
+Example 1:
+Input: I am keon kim and I like pizza
+Output: pizza like I and kim keon am I
+"""
 
 def reverse(array, i, j):
     while i < j:
@@ -7,6 +14,10 @@ def reverse(array, i, j):
 
 
 def reverse_words(string):
+    """
+    :type s: str
+    :rtype: str
+    """
     arr = string.strip().split()  # arr is list of words
     n = len(arr)
     reverse(arr, 0, n-1)

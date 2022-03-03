@@ -8,6 +8,11 @@ N and M is the length of text and pattern, respectively.
 """
 
 def knuth_morris_pratt(text, pattern):
+    """
+    :type text: str
+    :type pattern: str
+    :rtype: list[int]
+    """
     n = len(text)
     m = len(pattern)
     pi = [0 for i in range(m)]

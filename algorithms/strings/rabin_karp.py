@@ -1,5 +1,7 @@
-# Following program is the python implementation of
-# Rabin Karp Algorithm
+"""
+Following program is the python implementation of
+Rabin Karp Algorithm
+"""
 
 class RollingHash:
     def __init__(self, text, size_word):
@@ -45,4 +47,3 @@ def rabin_karp(word, text):
                 return i
         rolling_hash.move_window()
     return None
-

@@ -12,12 +12,22 @@ rotate("hello", 102) return "lohel"
 
 """
 def rotate(s, k):
+    """
+    :type s: str
+	:type k: int
+    :rtype: str
+    """
     long_string = s * (k // len(s) + 2)
     if k <= len(s):
         return long_string[k:k + len(s)]
-    else:
-        return long_string[k-len(s):k]
-    
+
+    return long_string[k-len(s):k]
+
 def rotate_alt(string, k):
+    """
+    :type s: str
+	:type k: int
+    :rtype: str
+    """
     k = k % len(string)
     return string[k:] + string[:k]

@@ -26,7 +26,10 @@ Space: O(n)
 """
 
 def fizzbuzz(n):
-    """Returns an array according to the requirements above"""
+    """
+    :type n: int
+    :rtype: List[]
+    """
 
     # Validate the input
     if n < 1:

@@ -57,7 +57,8 @@ def text_justification(words, max_width):
             row_len = tmp
             index += 1
             is_first_word = False
-        # here we have already got a row of str , then we should supplement enough ' ' to make sure the length is max_width.
+        # here we have already got a row of str , then we should
+        # supplement enough ' ' to make sure the length is max_width.
         row = ""
         # if the row is the last
         if index == len(words):

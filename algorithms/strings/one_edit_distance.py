@@ -20,6 +20,11 @@ def is_one_edit(s, t):
 
 
 def is_one_edit2(s, t):
+    """
+    :type s: str
+    :type t: str
+    :rtype: bool
+    """
     l1, l2 = len(s), len(t)
     if l1 > l2:
         return is_one_edit2(t, s)

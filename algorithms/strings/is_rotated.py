@@ -10,6 +10,11 @@ Reference: https://leetcode.com/problems/rotate-string/description/
 """
 
 def is_rotated(s1, s2):
+    """
+    :type s1: str
+    :type s2: str
+    :rtype: bool
+    """
     if len(s1) == len(s2):
         return s2 in s1 + s1
     else:
@@ -20,6 +25,11 @@ Another solution: brutal force
 Complexity: O(N^2)
 """
 def is_rotated_v1(s1, s2):
+    """
+    :type s1: str
+    :type s2: str
+    :rtype: bool
+    """
     if len(s1) != len(s2):
         return False
     if len(s1) == 0:

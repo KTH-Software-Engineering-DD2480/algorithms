@@ -1,8 +1,8 @@
 """
-At a job interview, you are challenged to write an algorithm to check if a 
+At a job interview, you are challenged to write an algorithm to check if a
 given string, s, can be formed from two other strings, part1 and part2.
-The restriction is that the characters in part1 and part2 are in the same 
-order as in s. The interviewer gives you the following example and tells 
+The restriction is that the characters in part1 and part2 are in the same
+order as in s. The interviewer gives you the following example and tells
 you to figure out the rest from the given test cases.
 'codewars' is a merge from 'cdw' and 'oears':
 s:  c o d e w a r s   = codewars
@@ -13,6 +13,12 @@ part2:    o   e   a r s   = oears
 
 # Recursive Solution
 def is_merge_recursive(s, part1, part2):
+    """
+    :type s: str
+    :type part1: str
+    :type part2: str
+    :rtype: bool
+    """
     if not part1:
         return s == part2
     if not part2:
@@ -28,9 +34,15 @@ def is_merge_recursive(s, part1, part2):
 
 # An iterative approach
 def is_merge_iterative(s, part1, part2):
+    """
+    :type s: str
+    :type part1: str
+    :type part2: str
+    :rtype: bool
+    """
     tuple_list = [(s, part1, part2)]
     while tuple_list:
-        string, p1, p2 = tuple_list.pop()            
+        string, p1, p2 = tuple_list.pop()
         if string:
             if p1 and string[0] == p1[0]:
                 tuple_list.append((string[1:], p1[1:], p2))
