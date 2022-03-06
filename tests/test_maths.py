@@ -25,6 +25,7 @@ from algorithms.maths import (
     num_digits,
     diffie_hellman_key_exchange, krishnamurthy_number,
     chinese_remainder_theorem,
+    gaussian_elimination
 )
 
 import unittest
@@ -534,6 +535,20 @@ class TestChineseRemainderSolver(unittest.TestCase):
         rem = []
         with self.assertRaises(Exception):
             chinese_remainder_theorem.solve_chinese_remainder(num, rem)
+
+class TestGaussianElimination(unittest.TestCase):
+    """[summary]
+    Test for the file gaussian_elimination.py
+
+    Arguments:
+        unittest {[type]} -- [description]
+    """
+
+    def test_two_variables(self):
+        x=[[1,1],[2,1]]
+        y=[1,1]
+        answer=[0.0, 1.0]
+        self.assertEqual(gaussian_elimination.gaussianElimination(x, y), answer)
 
 
 if __name__ == "__main__":
